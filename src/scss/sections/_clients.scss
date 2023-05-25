@@ -1,0 +1,109 @@
+.clients{
+    position: relative;
+    background-color: $bg-main;
+}
+
+body.single-services .clients{
+    background-color: transparent;
+}
+
+.clients__list{
+    position: relative;
+
+    @include media-sm{
+        padding: 0 15px;
+    }
+}
+
+.clients__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: $corner;
+    background-color: $white;
+    box-shadow: $shadow-styled;
+    overflow: hidden;
+
+    @include media-sm{
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
+
+.clients__item-desc{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    min-height: 300px;
+
+    @include media-sm{
+        padding: 30px 30px 50px 30px;
+    }
+}
+
+.clients__item-icon{
+    font-size: 60px;
+    line-height: 1;
+    color: $primary-20;
+}
+
+.clients__item-text{
+    margin-top: 20px;
+
+    &.text--hidden{
+        max-height: 130px;
+        background: linear-gradient(180deg, #444444 30%, rgba(68, 68, 68, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        overflow: hidden;
+    }
+}
+
+.clients__item-link{
+    position: absolute;
+    right: 50px;
+    bottom: 15px;
+    font-size: 12px;
+    text-decoration: underline;
+    color: $primary;
+
+    @include media-sm{
+        right: 30px;
+    }
+}
+
+.clients__item-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 85, 233, 0.05);
+    padding: 50px;
+    border-top: 1px solid $separator;
+
+    @include media-sm{
+        padding: 30px;
+    }
+}
+
+.clients__item-avatar{
+    margin-right: 25px;
+
+    i{
+        display: block;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border-radius: 100%;
+    }
+}
+
+.clients__item-userdata{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    b, span{
+        padding: 2px 0;
+    }
+}

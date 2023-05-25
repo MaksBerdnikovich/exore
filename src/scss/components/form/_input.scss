@@ -1,0 +1,75 @@
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    input, textarea {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 56px;
+        padding: 0 30px;
+        user-select: none;
+        transition: $transition;
+        background-color: $white;
+        border: 1px solid $primary;
+        color: $primary;
+        border-radius: $corner-btn;
+
+        @include placeholder($primary-50);
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+
+    textarea {
+        height: 100%;
+        min-height: 120px;
+        padding: 15px 30px;
+    }
+
+    label{
+        position: relative;
+        width: 100%;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .error-msg {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 3px 10px 0  30px;
+        font-size: 12px;
+        color: $danger;
+    }
+
+    &.error {
+        input,
+        textarea,
+        .checkbox-group__marker{
+            border-color: $danger;
+        }
+
+        .error-msg {
+            display: block;
+        }
+    }
+}
+
+.btn-group {
+    position: relative;
+    display: flex;
+
+    &.btn-group--center{
+        justify-content: center;
+    }
+}

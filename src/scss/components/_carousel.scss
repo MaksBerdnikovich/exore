@@ -1,0 +1,100 @@
+.owl-carousel .owl-stage-outer{
+    overflow: visible;
+}
+
+.owl-carousel .owl-item.active.center{
+    transform: translateY(-65px);
+    transition: $transition;
+}
+
+.owl-carousel .owl-item img{
+    width: auto;
+}
+
+.owl-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-sm{
+        margin-top: 30px;
+    }
+}
+
+.owl-prev,
+.owl-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 30px;
+    border-radius: 50%;
+    transition: $transition;
+    background-color: $primary !important;
+    color: $white !important;
+    box-shadow: $shadow-styled;
+    order: 0;
+
+    @include media-sm{
+        margin: 0 20px;
+    }
+
+    span, svg{
+        display: none;
+    }
+
+    &:after {
+        font-family: 'icons';
+        content: "\e900";
+        font-size: 10px;
+        font-weight: 700;
+        transform: scale(-1, 1);
+    }
+
+    &:hover {
+        color: $primary !important;
+        background-color: $white !important;
+    }
+
+    &.disabled{
+        opacity: 0.5;
+    }
+}
+
+.owl-next{
+    order: 2;
+
+    &:after {
+        transform: scale(1, 1);
+    }
+}
+
+.owl-dots{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 440px;
+    order: 1;
+
+    @include media-sm{
+        display: none;
+    }
+}
+
+.owl-dot{
+    position: relative;
+    height: 3px;
+    width: 60px;
+    background-color: $separator !important;
+    @include trans;
+
+    &.active{
+        background-color: $primary !important;
+    }
+
+    span, svg{
+        display: none;
+    }
+}

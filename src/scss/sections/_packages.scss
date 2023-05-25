@@ -1,0 +1,134 @@
+.packages{
+    position: relative;
+
+    .site-title p {
+        max-width: 780px;
+        margin: 40px auto 0 auto;
+    }
+}
+
+.packages__table{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -4px;
+
+    @include media-sm{
+        flex-direction: column;
+    }
+}
+
+.packages__table-cell{
+    padding: 0 4px;
+    margin-top: 50px;
+    flex: 1;
+}
+
+.packages__table-list{
+    border-radius: $corner;
+    background-color: $white;
+}
+
+.packages__table-list li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 65px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include media-mdx{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @include media-md{
+        min-height: 90px;
+    }
+
+    b{
+        display: none;
+        padding-bottom: 5px;
+
+        @include media-md{
+            display: block;
+            font-size: 12px;
+        }
+    }
+
+    &:first-child,
+    &:last-child{
+        min-height: 90px;
+    }
+
+    &:last-child{
+        padding-bottom: 15px;
+
+        @include media-sm{
+            padding-bottom: 0;
+        }
+    }
+
+    &:first-child b{
+        display: block;
+
+        @include media-md{
+            font-size: 18px;
+        }
+    }
+
+    &:first-child span{
+        font-size: 12px;
+    }
+}
+
+.packages__table-cell:not(.table-cell--start):not(.table-cell--highlight) .packages__table-list li:nth-child(even) {
+    background-color: $bg-main;
+}
+
+.packages__table-cell.table-cell--start{
+    @include media-md{
+        display: none;
+    }
+}
+
+.packages__table-cell.table-cell--start .packages__table-list li{
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 15px;
+
+    b{
+        display: block;
+    }
+}
+
+.packages__table-cell.table-cell--highlight .packages__table-list{
+    background-color: $primary;
+    color: $white;
+}
+
+.packages__info{
+    position: relative;
+    margin-top: 50px;
+    padding-left: 20px;
+    border-left: 2px solid $primary;
+
+    .title-h5{
+        @include media-sm{
+            font-size: 20px;
+        }
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    li{
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,91 @@
+.cta {
+    padding: 130px 0;
+    position: relative;
+
+    @include media-sm {
+        padding: 65px 0;
+    }
+}
+
+/*img*/
+.cta-img-sphere {
+    position: absolute;
+    top: 87px;
+    left: 20px;
+    z-index: 5;
+    max-width: 84px;
+}
+
+/*img*/
+.cta-img-orange {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    z-index: 5;
+    max-width: 70px;
+
+    @include media-sm {
+        display: none;
+    }
+}
+
+.cta-image-wrap {
+    background-image: url("../images/cases/cta-bg.svg");
+    background-size: cover;
+    padding: 35px 35px 0 35px;
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.cta-content {
+    padding-left: 30px;
+
+    @include media-sm {
+        padding-left: 0;
+    }
+}
+
+/*h2*/
+.cta-title {
+    font-size: 55px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    @include media-sm {
+        font-size: 26px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+}
+
+/*p*/
+.cta-name {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 600;
+
+    @include media-sm {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+/*p*/
+.cta-position {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 40px;
+
+    @include media-sm {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+}
+
+.btn-calendly {
+    margin-top: 40px;
+}

@@ -1,0 +1,56 @@
+.service-request{
+    position: relative;
+    display: flex;
+    align-items: center;
+    //min-height: 660px;
+    background: $bg-gradient;
+    text-align: center;
+}
+
+.service-request__title{
+    position: relative;
+
+    h2{
+        font-weight: 400;
+    }
+}
+
+.service-request__subtitle{
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.service-request__button{
+    margin-top: 65px;
+
+    .btn{
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+.service-request__sphere{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    @include media-md{
+        display: none;
+    }
+
+    .sphere{
+        position: absolute;
+        right: -10%;
+        top: -60%;
+    }
+
+    .pyramid{
+        position: absolute;
+        left: 20%;
+        top: 70%;
+    }
+}

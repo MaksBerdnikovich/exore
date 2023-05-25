@@ -1,0 +1,46 @@
+.posts-categories{
+    position: relative;
+    background-color: $bg-main;
+}
+
+.posts-categories__list{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include media-sm{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li{
+        margin: 15px;
+
+        @include media-sm{
+            margin: 5px 0;
+            width: 100%;
+        }
+    }
+
+    a.btn{
+        @include media-sm{
+            width: 100%;
+        }
+    }
+
+    a.btn.btn--primary:hover{
+        background-color: $primary;
+        color: $white;
+    }
+
+    a.btn.btn--primary-outline:hover{
+        background-color: transparent;
+        color: $primary;
+        box-shadow: 0 0 10px 5px rgba(#474bff, 0.1);
+    }
+
+    span{
+        font-weight: 500;
+    }
+}

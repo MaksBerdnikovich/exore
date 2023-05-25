@@ -1,0 +1,52 @@
+.who-we-are {
+    position: relative;
+    background-color: $bg-main;
+    text-align: center;
+}
+
+.who-we-are__desc {
+    max-width: 580px;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+.who-we-are__company {
+    margin-top: 70px;
+
+    @include media-sm{
+        margin-top: 30px;
+    }
+}
+
+.who-we-are__company-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    li{
+        margin: 25px;
+
+        @include media-mdx{
+            margin: 25px;
+        }
+    }
+
+    img{
+        max-height: 65px;
+    }
+
+    a{
+        display: flex;
+    }
+}
+
+.who-we-are__btn {
+    margin-top: 70px;
+
+    .btn {
+        width: 100%;
+        max-width: 370px;
+    }
+}

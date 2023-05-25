@@ -1,0 +1,161 @@
+.footer {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 60px 0;
+    background-color: $bg-styled;
+    color: $white;
+    font-weight: 500;
+}
+
+.colophon{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__logo{
+        display: flex;
+    }
+
+    &__contact{
+        position: relative;
+    }
+
+    &__contact-list{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clutch-widget{
+        margin: 0 auto;
+        max-width: 130px;
+        max-height: 70px;
+    }
+
+    .clutch-widget .content{
+        display: inline-flex;
+    }
+
+    &__contact-list a:hover{
+        opacity: 0.8;
+    }
+
+    &__contact-list a img{
+        margin: -2px 0 0 0;
+    }
+
+    &__nav{
+        position: relative;
+
+        @include media-md{
+            margin-top: 15px;
+        }
+    }
+
+    &__nav-menu{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @include media-md{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__nav-menu li{
+        @include media-md{
+            margin: 15px 10px;
+        }
+    }
+
+    &__nav-menu li + li{
+        margin-top: 20px;
+
+        @include media-md{
+            margin-top: 15px;
+        }
+    }
+
+    &__nav-menu li a{
+        font-weight: 500;
+    }
+
+    &__nav-menu li.current-menu-item a{
+        color: $primary;
+        opacity: 1;
+    }
+
+    &__reviews{
+        position: relative;
+    }
+
+    &__reviews-list{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @include media-md{
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__reviews-list li {
+        margin-top: 20px;
+    }
+
+    &__reviews-list li + li{
+        margin-left: 35px;
+        margin-top: 10px;
+
+        @include media-xs{
+            margin-left: 15px;
+        }
+    }
+
+    &__reviews-list a{
+        display: flex;
+    }
+}
+
+.copyright{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $black-20;
+    font-size: 14px;
+    font-weight: 500;
+
+    &__nav{
+        position: relative;
+    }
+
+    &__nav-menu{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__nav-menu li{
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    &__nav-menu li a{
+        text-decoration: underline;
+    }
+
+    &__rights{
+        margin-top: 20px;
+        text-align: center;
+    }
+}

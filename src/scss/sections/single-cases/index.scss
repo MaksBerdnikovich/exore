@@ -1,0 +1,62 @@
+body.single-cases{
+
+    /*h2*/
+    .section-headline {
+        font-size: 60px;
+        font-weight: 400;
+        margin-bottom: 40px;
+
+        @include media-sm {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .section-headline--casesgallery {
+        margin-bottom: 10px;
+    }
+
+    /*hr*/
+    hr.divider {
+        border: none;
+        border-top: 1px solid #d6d6d6;
+        margin: 0;
+    }
+
+    .btn-wrap {
+        margin-top: 60px;
+
+        @include media-sm {
+            margin-top: 25px;
+        }
+    }
+
+    .hide-on-mobile {
+        @include media-sm{
+            display: none !important;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    @import "info";
+
+    @import "gallery";
+
+    @import "goals";
+
+    @import "review";
+
+    @import "video";
+
+    @import "keyfeatures";
+
+    @import "cta";
+
+    @import "social";
+
+    @import "nav";
+}

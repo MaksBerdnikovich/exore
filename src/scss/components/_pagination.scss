@@ -1,0 +1,65 @@
+.pagination{
+    position: relative;
+
+    .nav-links{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page-numbers{
+        position: relative;
+        display: flex;
+        width: 56px;
+        height: 56px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid $black-10;
+        border-radius: 50%;
+        margin: 0 5px;
+        color: $black-50;
+
+        @include media-sm{
+            width: 44px;
+            height: 44px;
+            font-size: 14px;
+        }
+    }
+
+    .page-numbers:not(.dots):not(.current):hover{
+        box-shadow: 0 0 10px 5px rgba($black-50, 0.1);
+    }
+
+    .page-numbers.current{
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+    }
+
+    .page-numbers.dots{
+        border: 0;
+        font-size: 18px;
+    }
+
+    .page-numbers.prev,
+    .page-numbers.next{
+        font-size: 0;
+
+        &:before{
+            font-family: 'icons';
+            content: "\e900";
+            font-size: 12px;
+
+            @include media-sm{
+                font-size: 10px;
+            }
+        }
+    }
+
+    .page-numbers.prev:before{
+        transform: scale(-1, 1);
+    }
+}
+
+

@@ -1,0 +1,34 @@
+.title-area{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 210px;
+    background-color: $bg-styled;
+    background-image: url("../images/bg/title-area.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    .breadcrumbs {
+        margin-bottom: 15px;
+    }
+}
+
+.title-area__icon{
+    position: absolute;
+    left: -185px;
+    top: -25px;
+}
+
+.title-area__heading{
+    max-width: 650px;
+
+    &.heading--centered{
+        text-align: center;
+        max-width: none;
+    }
+
+    h1{
+        font-weight: 500;
+    }
+}

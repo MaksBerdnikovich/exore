@@ -1,0 +1,173 @@
+.modal{
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 730px;
+    padding: 65px;
+    margin: 0;
+    background-color: $white;
+    background-image: url("../images/bg/modal.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    border-radius: $corner;
+    cursor: auto !important;
+
+    @include media-sm{
+        padding: 30px 15px 45px 15px;
+    }
+
+    &.modal--confirm{
+        max-width: 500px;
+    }
+
+    /*
+    .carousel__button.is-close{
+        top: 15px;
+        right: 15px;
+        box-shadow: none;
+        color: rgba($main, 0.5);
+        transition: $transition;
+
+        &:hover{
+            color: $main;
+        }
+
+        svg{
+            filter: none;
+        }
+    }
+     */
+}
+
+.modal__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal__form{
+    margin-top: 15px;
+
+    .form-col{
+        margin-top: 30px;
+    }
+
+    input, textarea{
+        border-color: #888888;
+        background-color: transparent;
+        color: $main;
+
+        @include placeholder($black-50);
+    }
+
+    .btn{
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+.modal__body{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.modal__foot{
+    margin-top: 40px;
+    text-align: center;
+
+    .btn{
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+.animated-check svg,
+.animated-error svg{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.animated-check .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+}
+.animated-check .path.circle {
+    -webkit-animation: dash 1.5s ease-in-out;
+    animation: dash 1.5s ease-in-out;
+}
+.animated-check .path.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 1.5s 1s ease-in-out forwards;
+    animation: dash 1.5s 1s ease-in-out forwards;
+}
+.animated-check .path.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check 1.5s 1s ease-in-out forwards;
+    animation: dash-check 1.5s 1s ease-in-out forwards;
+}
+
+.animated-error .error-circle {
+    stroke-dasharray: 260.75219024795285px, 260.75219024795285px;
+    stroke-dashoffset: 260.75219024795285px;
+    animation: error-circle 1.2s linear;
+}
+.animated-error .error-line1 {
+    stroke-dasharray: 54px 55px;
+    stroke-dashoffset: 55px;
+    stroke-linecap: round;
+    animation: error-line .15s 1.2s linear both;
+}
+.animated-error .error-line2 {
+    stroke-dasharray: 54px 55px;
+    stroke-dashoffset: 55px;
+    stroke-linecap: round;
+    animation: error-line .2s .9s linear both;
+}
+
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash-check {
+    0% {
+        stroke-dashoffset: -100;
+    }
+    100% {
+        stroke-dashoffset: 900;
+    }
+}
+
+@keyframes error-line{
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes error-circle {
+    0% {
+        stroke-dasharray: 0, 260.75219024795285px;
+        stroke-dashoffset: 0;
+    }
+    35% {
+        stroke-dasharray: 120px, 120px;
+        stroke-dashoffset: -120px;
+    }
+    70% {
+        stroke-dasharray: 0, 260.75219024795285px;
+        stroke-dashoffset: -260.75219024795285px;
+    }
+    100% {
+        stroke-dasharray: 260.75219024795285px, 0;
+        stroke-dashoffset: -260.75219024795285px;
+    }
+}

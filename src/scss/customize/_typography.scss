@@ -1,0 +1,338 @@
+h1,
+.title-h1 {
+    font-size: 50px;
+    line-height: 1.1;
+
+    @include media-sm{
+        font-size: 40px;
+    }
+}
+
+h2,
+.title-h2 {
+    font-size: 48px;
+    line-height: 1.33;
+
+    @include media-sm{
+        font-size: 32px;
+    }
+}
+
+h3,
+.title-h3 {
+    font-size: 32px;
+
+    @include media-sm{
+        font-size: 24px;
+    }
+}
+
+h4,
+.title-h4 {
+    font-size: 24px;
+
+    @include media-sm{
+        font-size: 20px;
+    }
+}
+
+h5,
+.title-h5 {
+    font-size: 20px;
+
+    @include media-sm{
+        font-size: 18px;
+    }
+}
+
+h6,
+.title-h6 {
+    font-size: 18px;
+
+    @include media-sm{
+        font-size: 16px;
+    }
+}
+
+.title-giant{
+    font-size: 70px;
+    line-height: 1.33;
+    font-weight: 500;
+
+    @include media-sm{
+        font-size: 64px;
+    }
+
+    @include media-xs{
+        word-break: break-word;
+        font-size: 50px;
+    }
+}
+
+.title-xlarge{
+    font-size: 64px;
+    line-height: 1.33;
+    font-weight: 400;
+
+    @include media-sm{
+        font-size: 50px;
+    }
+
+    @include media-xs{
+        word-break: break-word;
+        font-size: 48px;
+    }
+}
+
+.title-large{
+    font-size: 60px;
+    line-height: 1.33;
+    font-weight: 400;
+
+    @include media-sm{
+        font-size: 48px;
+    }
+
+    @include media-xs{
+        word-break: break-word;
+        font-size: 40px;
+    }
+}
+
+.styled-subtitle {
+    font-size: 20px;
+}
+
+.body-small {
+    font-size: 14px;
+}
+
+.body-tiny {
+    font-size: 12px;
+}
+
+h1.medium, .title-h1.medium,
+h2.medium, .title-h2.medium,
+h3.medium, .title-h3.medium,
+h4.medium, .title-h4.medium,
+h5.medium, .title-h5.medium,
+h6.medium, .title-h6.medium,
+.title-giant.medium,
+.title-xlarge.medium,
+.title-large.medium,
+.styled-subtitle.medium {
+    font-weight: 500 !important;
+    color: $secondary;
+}
+
+h1.normal, .title-h1.normal,
+h2.normal, .title-h2.normal,
+h3.normal, .title-h3.normal,
+h4.normal, .title-h4.normal,
+h5.normal, .title-h5.normal,
+h6.normal, .title-h6.normal,
+.title-giant.normal,
+.title-xlarge.normal,
+.title-large.normal,
+.styled-subtitle.normal {
+    font-weight: 400 !important;
+}
+
+h1.light, .title-h1.light,
+h2.light, .title-h2.light,
+h3.light, .title-h3.light,
+h4.light, .title-h4.light,
+h5.light, .title-h5.light,
+h6.light, .title-h6.light,
+.title-giant.light,
+.title-xlarge.light,
+.title-large.light,
+.styled-subtitle.light {
+    font-weight: 300 !important;
+}
+
+.title-xlarge.thin,
+.title-large.thin,
+.styled-subtitle.thin {
+    font-weight: 100 !important;
+}
+
+p {
+    line-height: 1.7;
+}
+
+b {
+    font-weight: 500;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a,
+button{
+    text-decoration: none;
+    cursor: pointer;
+    transition: $transition;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.tx-upp {
+    text-transform: uppercase;
+}
+
+.tx-cap {
+    text-transform: capitalize;
+}
+
+.tx-low {
+    text-transform: lowercase;
+}
+
+.tx-dec {
+    text-decoration: underline;
+}
+
+.tx-center{
+    text-align: center;
+}
+
+.tx-main {
+    color: $main;
+}
+
+.tx-primary {
+    color: $primary;
+}
+
+.tx-secondary {
+    color: $secondary;
+}
+
+.tx-success {
+    color: $success;
+}
+
+.tx-danger {
+    color: $danger;
+}
+
+.tx-info {
+    color: $info;
+}
+
+.tx-warning {
+    color: $warning;
+}
+
+.tx-white{
+    color: $white;
+}
+
+.tx-pink {
+    color: $pink;
+}
+
+.tx-blue {
+    color: $blue;
+}
+
+.tx-indigo {
+    color: $indigo;
+}
+
+.tx-gray {
+    color: $gray;
+}
+
+.tx-teal {
+    color: $teal;
+}
+
+.tx-purple {
+    color: $purple;
+}
+
+body .tinymce,
+body .ckeditor{
+
+    p {
+        margin-top: 1.2em;
+    }
+
+    ul, ol{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 1.2em;
+        margin: 0.5em 0 0 0;
+        list-style-type: disc;
+    }
+
+    li{
+        width: 100%;
+        padding: 0;
+    }
+
+    li::marker{
+        color: $primary;
+    }
+
+    li + li{
+        margin-top: 5px;
+    }
+
+    a{
+        color: $primary;
+        text-decoration: underline;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+body .ckeditor{
+
+    h1, h2, h3, h4, h5, h6, ul, ol{
+        margin: 1em 0;
+    }
+
+    figure{
+        margin: 2em 0;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1.2em;
+    }
+
+    em{
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .wp-block-pullquote{
+        background-color: $bg-main;
+        border: 0 !important;
+        padding: 60px;
+
+        p{
+            margin: 0;
+        }
+    }
+}

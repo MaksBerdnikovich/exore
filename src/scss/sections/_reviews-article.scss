@@ -1,0 +1,153 @@
+body.single-reviews .content{
+    display: flex;
+    flex-direction: column;
+}
+
+body.single-reviews .posts-navigation{
+    margin-top: auto;
+}
+
+body.single-reviews .reviews-article{
+    margin-bottom: 65px;
+}
+
+.reviews-article{
+    position: relative;
+}
+
+.reviews-article__wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-article__item{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+
+    @include media-md{
+        flex-direction: column;
+    }
+}
+
+.reviews-article + .reviews-article .reviews-article__item{
+    border-top: 1px solid $black-10;
+}
+
+.reviews-article:first-of-type .reviews-article__item{
+    padding-top: 0;
+}
+
+.reviews-article__start{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.reviews-article__avatar{
+    position: relative;
+    margin-bottom: 20px;
+
+    i{
+        display: block;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border-radius: 100%;
+    }
+}
+
+.reviews-article__center{
+    position: relative;
+    padding: 0 50px;
+
+    @include media-md{
+        max-width: none;
+        width: 100%;
+        padding: 0;
+        margin: 30px 0 0 0;
+        order: 3;
+    }
+}
+
+.reviews-article__position{
+    margin-top: 10px;
+}
+
+.reviews-article__rating{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
+.reviews-article__rating-stars{
+    i{
+        color: $black-20;
+    }
+
+    i.active{
+        color: $yellow;
+    }
+}
+
+.reviews-article__rating-point{
+    margin-left: 10px;
+    margin-top: 5px;
+
+    span{
+        color: $black-20;
+    }
+}
+
+.reviews-article__text{
+    position: relative;
+    margin-top: 20px;
+    transition: $transition;
+
+    &.text--hidden{
+        max-height: 130px;
+        background: linear-gradient(180deg, #444444 30%, rgba(68, 68, 68, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        overflow: hidden;
+    }
+
+    .ckeditor p:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+.reviews-article__more {
+    position: relative;
+    margin-top: 10px;
+    font-size: 12px;
+    color: $primary;
+    text-decoration: underline;
+}
+
+.reviews-article__end{
+    position: relative;
+
+    @include media-md{
+        margin-top: 15px;
+    }
+}
+
+.reviews-article__platform{
+    position: relative;
+    min-width: 120px;
+    text-align: right;
+
+    @include media-md{
+        text-align: left;
+    }
+
+    img{
+        margin-top: -10px;
+        width: auto;
+    }
+}

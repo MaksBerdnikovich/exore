@@ -1,0 +1,50 @@
+.form {
+    position: relative;
+}
+
+.form-wrap{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.form-col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 15px;
+
+    &.form-col--100 {
+        width: 100%;
+    }
+
+    &.form-col--50 {
+        width: 50%;
+    }
+
+    &.form-col--25 {
+        width: 25%;
+    }
+
+    @include media-sm {
+        width: 100% !important;
+    }
+}
+
+@import "input";
+
+@import "radio";
+
+@import "checkbox";
+
+@import "select";
+
+@import "switcher";
+
+@import "auth";
+
+@import "file";
+
+@import "slider";

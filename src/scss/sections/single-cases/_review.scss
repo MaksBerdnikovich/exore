@@ -1,0 +1,16 @@
+.case-review{
+    position: relative;
+    margin-top: 65px;
+
+    .section-headline{
+        font-size: 48px;
+
+        @include media-sm{
+            font-size: 30px;
+        }
+    }
+
+    .clients__item-desc{
+        min-height: auto;
+    }
+}

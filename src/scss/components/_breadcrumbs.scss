@@ -1,0 +1,50 @@
+$bc-color: #AAAAAA;
+
+.breadcrumbs {
+    position: relative;
+
+    ul {
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    li {
+        display: inline-flex;
+        margin-right: 22px;
+        position: relative;
+        font-size: 13px;
+    }
+
+    li:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -14px;
+        bottom: 0;
+        margin: auto;
+        height: 1px;
+        width: 8px;
+        background-color: $bc-color;
+    }
+
+    li:last-child:after {
+        content: "";
+        display: none;
+    }
+
+    a {
+        color: $bc-color;
+        @include trans(all);
+
+        &:hover {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+    span{
+        color: $bc-color;
+    }
+}

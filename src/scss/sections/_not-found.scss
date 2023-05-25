@@ -1,0 +1,24 @@
+.not-found{
+    position: relative;
+}
+
+.not-found__wrap{
+    position: relative;
+    display: flex;
+    max-width: 500px;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.not-found__btn{
+    position: relative;
+    min-width: 200px;
+    margin: 50px auto 0 auto;
+
+    i{
+        transform: scale(-1, 1);
+        margin-right: 10px;
+        margin-top: -2px;
+    }
+}

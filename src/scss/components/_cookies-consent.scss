@@ -1,0 +1,41 @@
+.cookies-consent{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: $bg-main;
+    box-shadow: $shadow-top;
+    z-index: 99;
+
+    &.visible {
+        display: block !important;
+    }
+}
+
+.cookies-consent__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include media-xs{
+        flex-direction: column;
+    }
+}
+
+.cookies-consent__text{
+    margin-right: 15px;
+
+    @include media-xs{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.cookies-consent__btn{
+
+    .btn{
+        min-width: 100px;
+    }
+}

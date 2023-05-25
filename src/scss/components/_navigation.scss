@@ -1,0 +1,251 @@
+.posts-navigation {
+    background-color: $primary;
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        background-color: $primary;
+
+        @include media-sm {
+            flex-direction: column;
+        }
+    }
+
+    .nav-previous,
+    .nav-next {
+        position: relative;
+        display: flex;
+        width: 50%;
+        min-height: 90px;
+        align-items: center;
+        padding: 15px 40px;
+
+        @include media-sm {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    .nav-previous{
+        justify-content: flex-end;
+        text-align: right;
+
+        @include media-sm {
+            justify-content: center;
+            text-align: center;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1px;
+            height: 100%;
+            width: 1px;
+            background: rgba($white, 0.2);
+
+            @include media-sm {
+                width: 100%;
+                height: 1px;
+                top: 100%;
+            }
+        }
+    }
+
+    .nav-previous a,
+    .nav-next a{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 26px;
+        color: $white;
+    }
+
+    .nav-previous .nav-title,
+    .nav-next .nav-title{
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    .nav-previous .nav-subtitle,
+    .nav-next .nav-subtitle{
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+
+        @include media-sm {
+            justify-content: center;
+        }
+    }
+
+    .nav-previous .nav-subtitle{
+        justify-content: flex-end;
+
+        @include media-sm {
+            justify-content: center;
+        }
+    }
+
+    .nav-previous .nav-subtitle:before,
+    .nav-next .nav-subtitle:after{
+        content: '';
+        display: inline-flex;
+        width: 43px;
+        height: 9px;
+        background-image: url("../images/icons/arrow-long.svg");
+        background-repeat: no-repeat;
+    }
+
+    .nav-previous .nav-subtitle:before{
+        margin-right: 15px;
+        transform: scale(-1, 1);
+    }
+
+    .nav-next .nav-subtitle:after{
+        margin-left: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prev-next-posts__items {
+    width: 50%;
+
+    @include media-sm {
+        width: 100%;
+    }
+}
+
+/*a*/
+.prev-next-posts__item {
+    padding: 47px;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+
+    @include trans(all);
+
+    &:hover {
+        opacity: 0.7;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+/*a*/
+.prev-next-posts__item--left {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: -50px;
+        background-image: url("../images/cases/arrow-left.png");
+        background-size: cover;
+        width: 50px;
+        height: 10px;
+    }
+}
+
+/*a*/
+.prev-next-posts__item--right {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: -50px;
+        background-image: url("../images/cases/arrow-right.png");
+        background-size: cover;
+        width: 50px;
+        height: 10px;
+    }
+}
+
+/*span*/
+.prevnext-link-item__title {
+    display: block;
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+/*span*/
+.prevnext-link-item__subtitle {
+    display: block;
+    opacity: .6;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.prev-next-posts__left {
+    text-align: right;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -1px;
+        height: 100%;
+        width: 1px;
+        background: #fff;
+        opacity: .2;
+        z-index: 4;
+
+        @include media-sm {
+            bottom: 0;
+            top: auto;
+            left: 0;
+            width: 100%;
+            height: 1px;
+        }
+    }
+}
+
+.prev-next-posts__container--right {
+    .prev-next-posts__right {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -1px;
+            height: 100%;
+            width: 1px;
+            background: #fff;
+            opacity: .2;
+            z-index: 4;
+
+            @include media-sm {
+                bottom: 0;
+                top: auto;
+                left: 0;
+                width: 100%;
+                height: 1px;
+            }
+        }
+    }
+}

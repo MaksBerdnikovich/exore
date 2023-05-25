@@ -1,0 +1,53 @@
+.service-advantages{
+    position: relative;
+}
+
+.service-advantages__title{
+    position: relative;
+    text-align: center;
+}
+
+.service-advantages__list{
+    position: relative;
+
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -15px;
+    }
+
+    li{
+        width: 25%;
+        padding: 0 15px;
+        margin-top: 80px;
+
+        @include media-md{
+            width: 50%;
+            margin-top: 60px;
+        }
+
+        @include media-xs{
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
+.service-advantages__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-advantages__item-image{
+    display: flex;
+    margin-bottom: 20px;
+
+    img{
+        max-width: 90px;
+    }
+}
